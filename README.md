@@ -27,8 +27,4 @@ Temporal Splits: Implemented a non-random 80/20 time-based split to ensure the m
 
 I compared multiple architectures to find the most efficient predictor:
 
-Model,RMSE,R2 Score
-Random Forest,69.89,0.90
-Gradient Boosting,91.67,0.83
-Linear Regression,203.04,0.15
-"ARIMA (5,1,2)",N/A,Time-Series
+<img width="305" height="174" alt="image" src="https://github.com/user-attachments/assets/785feb8a-92b9-42ef-ab5b-bf1f7915d95f" />
