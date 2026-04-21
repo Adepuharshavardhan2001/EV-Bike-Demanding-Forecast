@@ -1,4 +1,4 @@
-# EV & Bike Demand Intelligence Suite
+# EV & Bike Demand Forecasting
 
 A professional-grade forecasting platform that combines Supervised Machine Learning (Random Forest) with Statistical Time-Series (ARIMA) to predict urban mobility demand.
 This tool provides both granular hourly predictions and long-term daily trends through an interactive Streamlit interface.
