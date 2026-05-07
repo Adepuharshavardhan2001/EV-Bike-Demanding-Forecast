@@ -1,30 +1,137 @@
-# EV & Bike Demand Forecasting
+# EV / Bike Demand Forecasting Platform
 
-A professional-grade forecasting platform that combines Supervised Machine Learning (Random Forest) with Statistical Time-Series (ARIMA) to predict urban mobility demand.
-This tool provides both granular hourly predictions and long-term daily trends through an interactive Streamlit interface.
+An end-to-end Machine Learning and Time-Series forecasting platform built to predict urban EV/Bike demand using Random Forest Regression and ARIMA forecasting.
 
- # Application Features:
+The project includes:
+- Hourly ride demand prediction
+- Long-term demand forecasting
+- Interactive Streamlit dashboard
+- Business-oriented demand insights
 
-Hourly ML Predictor: Uses a trained Random Forest pipeline to predict specific ride counts based on weather and time variables (R2 = 0.90).
+---
 
-Daily ARIMA Forecast: Projects total ride volume for the next 60 days using univariate time-series analysis.
+## Application Preview
 
-Automated Pipeline: Full preprocessing (OneHotEncoding + Scaling) bundled into a single joblib file for zero-latency deployment.
+### Streamlit Dashboard
+![Dashboard](images/dashboard.png)
 
-Interactive Dashboard: A "What-If" analysis tool to see how humidity, temperature, and work schedules impact fleet demand.
+---
 
-# The Machine Learning Pipeline:
+## Business Problem
 
-# Exploratory Data Analysis (EDA)
+Urban mobility platforms require accurate demand forecasting to:
+- optimize fleet availability
+- reduce idle vehicles
+- improve customer availability
+- plan operational resources efficiently
 
-Distribution: Identified right-skewed demand patterns using Seaborn KDE plots.
+This project predicts ride demand using weather, seasonal, and temporal variables.
 
-Correlation: Analyzed environmental impacts; found atemp (feeling temperature) to be the strongest positive driver and humidity the strongest negative driver.
+---
 
-Temporal Splits: Implemented a non-random 80/20 time-based split to ensure the model generalizes to the future, not just the past.
+## Features
 
-# 2. Model Benchmarking
+- Random Forest hourly demand prediction
+- ARIMA-based future forecasting
+- Interactive Streamlit UI
+- “What-If” scenario analysis
+- Automated preprocessing pipeline
+- Business demand recommendations
 
-I compared multiple architectures to find the most efficient predictor:
+---
 
-<img width="305" height="174" alt="image" src="https://github.com/user-attachments/assets/785feb8a-92b9-42ef-ab5b-bf1f7915d95f" />
+## Tech Stack
+
+- Python
+- Pandas
+- Scikit-learn
+- Streamlit
+- ARIMA (statsmodels)
+- Plotly
+- Matplotlib
+- Seaborn
+
+---
+
+## Project Workflow
+
+Data Collection → EDA → Feature Engineering → Model Building → Model Comparison → ARIMA Forecasting → Streamlit Deployment
+
+---
+
+## Dataset
+
+- Source: Bike Sharing Dataset
+- Records: 17,379 hourly observations
+
+### Features:
+- weather
+- humidity
+- temperature
+- working day
+- hour
+- season
+
+---
+
+## Exploratory Data Analysis
+
+### Demand Distribution
+![Distribution](images/distribution.png)
+
+### Correlation Heatmap
+![Heatmap](images/heatmap.png)
+
+---
+
+## Model Performance
+
+| Model | RMSE | R² Score |
+|------|------|------|
+| Random Forest | 69.89 | 0.90 |
+| Gradient Boosting | 91.67 | 0.83 |
+| Linear Regression | 203.04 | 0.15 |
+| ARIMA (5,1,2) | Time-Series | Forecasting |
+
+---
+
+## Best Model
+
+Random Forest achieved the best performance with:
+- RMSE: 69.89
+- R² Score: 0.90
+
+### Important Features
+- Feeling Temperature
+- Evening Peak Hours
+- Humidity
+- Working Day
+
+---
+
+## Streamlit Application
+
+The application allows users to:
+- predict hourly demand
+- simulate weather conditions
+- generate ARIMA forecasts
+- analyze mobility demand interactively
+
+---
+
+## Future Improvements
+
+- Real-time API integration
+- LSTM forecasting models
+- Cloud deployment
+- Live weather integration
+- Dynamic traffic analysis
+
+---
+
+## Author
+
+### A. Harshavardhan
+
+- LinkedIn: https://www.linkedin.com/in/adepu-harshavardhan-ds/
+- GitHub: https://github.com/Adepuharshavardhan2001
